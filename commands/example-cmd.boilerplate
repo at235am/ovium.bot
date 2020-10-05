@@ -1,0 +1,13 @@
+module.exports = {
+  name: "example-cmd",
+  description:
+    "Example file to remind myself of certain keys that my main file handles",
+  args: true, // used to tell user that they need arguments
+  usage: "<nothing> <thing>", // arguments to be supplied
+  gcd: 5, // time in seconds for a command to have a global cooldown
+  aliases: ["example", "cmd-help"],
+  cooldown: 5, // time in seconds for a command to have a cooldown tied to the user issuing it
+  execute(message, args) {
+    message.channel.send("example example example");
+  },
+};
